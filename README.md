@@ -2,12 +2,9 @@
 
 ## Local development
 ### 🔧 Setting up
-1️⃣ Clone our repository from GitHub to your `desired_folder_name` for both frontend and backend respectively
+1️⃣ Clone the repository from GitHub to your `desired_folder_name`
 ```bash
-# frontend
-git clone https://github.com/emocado/oop-g2-t2-frontend.git desired_folder_name
-# backend
-git clone https://github.com/umardanialjr/oop-g2-t2.git desired_folder_name
+git clone https://github.com/leeshuoan/corporate-pass-application.git
 ```
 <br></br>
 
