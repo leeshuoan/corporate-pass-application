@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Corporate Membership Letter</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                text-indent: 0;
+            }
+            .s1 {
+                color: black;
+                font-family: Calibri, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: none;
+                font-size: 12pt;
+            }
+            .p,
+            p {
+                color: black;
+                font-family: Calibri, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: none;
+                font-size: 11pt;
+                margin: 0pt;
+            }
+            h1 {
+                color: black;
+                font-family: Calibri, sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                text-decoration: none;
+                font-size: 12pt;
+            }
+            h3 {
+                color: black;
+                font-family: Calibri, sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                text-decoration: none;
+                font-size: 9pt;
+            }
+            h2 {
+                color: black;
+                font-family: Calibri, sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                text-decoration: none;
+                font-size: 11pt;
+            }
+            .s2 {
+                color: #00f;
+                font-family: Calibri, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: none;
+                font-size: 11pt;
+            }
+            .a {
+                color: #00f;
+                font-family: Calibri, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: underline;
+                font-size: 11pt;
+            }
+            .s4 {
+                color: #00f;
+                font-family: Calibri, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: none;
+                font-size: 11pt;
+            }
+            .s6 {
+                color: #00af50;
+                font-family: Calibri, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: none;
+                font-size: 11pt;
+            }
+            li {
+                display: block;
+            }
+            #l1 {
+                padding-left: 0pt;
+            }
+            #l1 > li > *:first-child:before {
+                content: " ";
+                color: black;
+                font-family: Symbol, serif;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: none;
+                font-size: 11pt;
+            }
+            li {
+                display: block;
+            }
+            #l2 {
+                padding-left: 0pt;
+            }
+            #l2 > li > *:first-child:before {
+                content: "• ";
+                color: black;
+                font-family: Verdana, sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: none;
+                font-size: 11pt;
+            }
+        </style>
+    </head>
+    <body>
+        <img th:src="@{classpath:static/SPS_logo.jpg}" width="117" height="102" alt="" style="padding-left: 5pt"/>
+        <p style="text-indent: 0pt; text-align: left"><br /></p>
+        <p style="padding-left: 5pt; text-indent: 0pt; text-align: left">
+            Date: <span data-th-text="${date}"></span>
+        </p><br/>
+        <div style="display: flex; justify-content: space-between">
+            <div>
+                <h1
+                    style="
+                        padding-top: 2pt;
+                        padding-left: 5pt;
+                        text-indent: 0pt;
+                        text-align: left;
+                    "
+                >
+                    CORPORATE LETTER
+                </h1>
+                <h1
+                    style="
+                        padding-left: 5pt;
+                        text-indent: 0pt;
+                        text-align: left;
+                    "
+                >
+                    MANDAI WILDLIFE RESERVE
+                </h1>
+            </div>
+            <img style="position:relative;left:270pt;bottom:40pt" width="310" height="50" alt="image" th:src="@{classpath:static/barcode.jpg}" />
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <div style="position:relative;bottom:40pt"> 
+                <img width="150" height="50" alt="image" th:src="@{classpath:static/mandai_zoo.jpg}" />
+                <img width="150" height="50" alt="image" th:src="@{classpath:static/mandai_river.jpg}" />
+            </div>
+            <div style="position:relative;left:160pt;bottom:80pt; padding-right: 85px; text-align: center;">
+                <h3>
+                    CFOZ PREMIUM
+                </h3>
+                <h3>
+                    (Barcode #1)
+                </h3>
+                <h3>
+                    Expiry Date: 31-12-2020
+                </h3>
+            </div>
+        </div>
+        <div style ="position:relative; bottom:65pt">
+            <p
+                style="
+                    padding-top: 2pt;
+                    padding-left: 5pt;
+                    text-indent: 0pt;
+                    text-align: left;
+                "
+            >
+                This is to certify that the following employee is authorised to
+                visit Singapore Zoo &amp; River Wonders under your Company’s
+                Corporate Membership number 22401046113600009088.
+            </p>
+            <p style="text-indent: 0pt; text-align: left"><br /></p>
+            <h2 style="padding-left: 5pt; text-indent: 0pt; text-align: left">
+                Employee <span class="p" data-th-text="${employeeName}"></span>
+            </h2>
+            <hr style="border-top: 3px solid #bbb; margin-top: 10px;"></hr>
+            <h2 style="padding-left: 5pt; text-indent: 0pt; text-align: left; padding-top: 10px;">
+                Date of Visit <span class="p" data-th-text="${loanDate}"></span>
+            </h2>
+            <hr style="border-top: 3px solid #bbb; margin-top: 10px;"></hr>
+            <p style="padding-left: 5pt; text-indent: 0pt; text-align: left; padding-top: 10px;">
+                Present this letter to enjoy up to 20% discount at selected Retail
+                and F&amp;B outlets.
+            </p>
+            <hr style="border-top: 3px solid #bbb; margin-top: 10px;"></hr>
+            <p style="text-indent: 0pt; text-align: left"><br /></p>
+            <h2 style="padding-left: 5pt; text-indent: 0pt; text-align: left">
+                Terms and Conditions
+            </h2>
+            <p style="text-indent: 0pt; text-align: left"><br /></p>
+            <ul id="l1">
+                <li>
+                    <p
+                        style="
+                            padding-left: 23pt;
+                            text-indent: -18pt;
+                            text-align: justify;
+                        "
+                    >
+                        All corporate members <b>must </b>secure a time slot via<a
+                            href="https://managebooking.mandai.com.sg/"
+                            class="s4"
+                            target="_blank"
+                        >
+                        </a
+                        ><span
+                            style="
+                                color: #00f;
+                                font-family: Calibri, sans-serif;
+                                font-style: normal;
+                                font-weight: normal;
+                                text-decoration: underline;
+                                font-size: 11pt;
+                            "
+                            >https://managebooking.mandai.com</span
+                        >/ and comply to MWR
+                        <span style="color: #212c31"
+                            >Safe Management Measures for your safety and
+                            well-being, otherwise entry is not allowed.</span
+                        >
+                        Time slot bookings are subject to availability, on a first
+                        come, first served basis.
+                    </p>
+                </li>
+            </ul>
+            <p style="text-indent: 0pt; text-align: left"><br /></p>
+            <ul id="l2">
+                <li>
+                    <p
+                        style="
+                            padding-left: 23pt;
+                            text-indent: -18pt;
+                            text-align: justify;
+                        "
+                    >
+                        Each letter allows complimentary admission to Singapore Zoo
+                        &amp; River Wonders for up to four (4) persons, one of whom
+                        must be an employee of the corporate member named above. The
+                        employee must be present and produce valid staff pass or
+                        NRIC along with the signed letter for benefit to apply.
+                    </p>
+                    <p style="text-indent: 0pt; text-align: left"><br /></p>
+                </li>
+                <li>
+                    <p
+                        style="
+                            padding-left: 23pt;
+                            text-indent: -18pt;
+                            text-align: left;
+                        "
+                    >
+                        Each letter can only be used <b>ONCE </b>a day.
+                    </p>
+                </li>
+                <li>
+                    <p
+                        style="
+                            padding-top: 11pt;
+                            padding-left: 23pt;
+                            text-indent: -18pt;
+                            text-align: justify;
+                        "
+                    >
+                        In the event of unauthorized use or copy of the letter,
+                        Singapore Zoo &amp; River Wonders will deny entry and
+                        verification will be done with the company which will take
+                        appropriate action for any wilful violation.
+                    </p>
+                    <p style="text-indent: 0pt; text-align: left"><br /></p>
+                </li>
+                <li>
+                    <p
+                        style="
+                            padding-left: 23pt;
+                            text-indent: -18pt;
+                            text-align: justify;
+                        "
+                    >
+                        In the event that the letter is detected to be presented
+                        more than once on the same day; the employee will be liable
+                        for the additional entry at Singapore Zoo &amp; River
+                        Wonders prevailing walk-in rate accordingly.
+                    </p>
+                    <p style="text-indent: 0pt; text-align: left"><br /></p>
+                </li>
+                <li>
+                    <p
+                        style="
+                            padding-left: 23pt;
+                            text-indent: -18pt;
+                            text-align: left;
+                        "
+                    >
+                        Your existing Corporate Membership will expire once the
+                        validity period is over.
+                    </p>
+                </li>
+            </ul>
+            <p
+                class="s2"
+                style="
+                    padding-top: 12pt;
+                    padding-left: 23pt;
+                    text-indent: 0pt;
+                    text-align: left;
+                "
+            >
+                <a
+                    href="https://apc01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.mandai.com%2Fen%2Fmemberships%2Fcorporate-membership.html&amp;data=04%7C01%7Csamantha.lau%40wrs.com.sg%7Cbc47b06b452f463be16e08d99236c0a2%7C68888baa623044569d1695d34db8fe8b%7C0%7C0%7C637701586142342911%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=3f5HIKo46KockeZbaOOwYuKuzOBRsNHW0lOuwhgxrgU%3D&amp;reserved=0"
+                    style="
+                        color: black;
+                        font-family: Calibri, sans-serif;
+                        font-style: normal;
+                        font-weight: normal;
+                        text-decoration: none;
+                        font-size: 11pt;
+                    "
+                    target="_blank"
+                    >In addition, you shall adhere to the Membership terms and
+                    conditions stated </a
+                ><a
+                    href="https://apc01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.mandai.com%2Fen%2Fmemberships%2Fcorporate-membership.html&amp;data=04%7C01%7Csamantha.lau%40wrs.com.sg%7Cbc47b06b452f463be16e08d99236c0a2%7C68888baa623044569d1695d34db8fe8b%7C0%7C0%7C637701586142342911%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=3f5HIKo46KockeZbaOOwYuKuzOBRsNHW0lOuwhgxrgU%3D&amp;reserved=0"
+                    class="a"
+                    target="_blank"
+                    >https://www.mandai.com/en/memberships/corporate-membership.html</a
+                >
+                <span style="color: #333">during your visit.</span>
+            </p>
+            <p style="text-indent: 0pt; text-align: left"><br /></p>
+            <p
+                style="
+                    padding-top: 2pt;
+                    padding-left: 5pt;
+                    text-indent: 0pt;
+                    text-align: left;
+                "
+            >
+                Best Regards,
+            </p>
+            <p style="text-indent: 0pt; text-align: left"><br /></p>
+            <p
+                class="s6"
+                style="padding-left: 5pt; text-indent: 0pt; text-align: left"
+            >
+                Manager, Human Resource
+            </p>
+            <p
+                class="s6"
+                style="padding-left: 5pt; text-indent: 0pt; text-align: left"
+            >
+                MR/MRS HR
+            </p>
+        </div>
+    </body>
+</html>

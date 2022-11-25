@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Authorisation Letter - Premium Corporate Friends of the Zoo - SMUX</title>
+        <style> 
+            .p, p, span { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11pt; margin:0pt; }
+            .s1 { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 11pt; }
+            .h1, h1 { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 11.5pt; }
+            .s2 { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 11.5pt; }
+            h2 { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 11pt; }
+            .s3 { color: black; font-family:"Times New Roman", serif; font-style: normal; font-weight: normal; text-decoration: underline; font-size: 11pt; }
+            h3 { color: #181511; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 7pt; }
+            .s4 { color: #181511; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+            .s5 { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+            .s6 { color: #181511; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 7pt; }
+        </style>
+    </head>
+
+    <body>
+        <div style = "padding-left:35px; text-align: center;">
+            <img width="117" height="102" alt="image" th:src="@{classpath:static/SPS_logo.jpg}"/>
+        </div>
+        <br/><br/><br/>
+        <div>
+            <p>Date: <span data-th-text="${date}"></span> 
+            </p>
+            <br/>
+
+            <p data-th-text="${attractionName}"></p>
+            <p data-th-text="${address}"></p>
+            <p data-th-text="${postal}"></p>
+            <br/><br/><br/><br/>
+            <p >Dear Sir/Madam</p>
+            <br/>
+            <h1 style="margin-bottom: 0pt;">AUTHORISATION LETTER –</h1>
+            <span class="h1" style="margin-top: 0pt;" data-th-text="${attractionCardType}"></span>
+
+            <br/>
+            <div>
+                <p style="padding-top: 3pt;">
+                    <span class="p">Singapore Sports School hereby authorise our employee identified below, to utilise our </span>
+                    <span class="s1" data-th-text="${cardName}"></span>
+                    <br/>
+                    <span class="s1" data-th-text="${secondHalf}"></span><span class="p"> on the date as indicated.</span>
+                </p>
+                
+                
+                <h2 style="padding-top: 11pt;">Date of Visit:<span style = "padding-left: 10pt; text-indent:5pt; text-decoration: underline;" data-th-text="${loanDate}"></span></h2>
+                <h2 style="padding-top: 11pt;text-indent: 0pt;text-align: left;">Name of Employee:   <span style = "padding-left: 10pt; text-indent: 5pt; text-decoration: underline;" data-th-text="${employeeName}"></span></h2>
+
+                <br/>
+                <p style="padding-top: 3pt;text-indent: 0pt;text-align: left;">Thank you.</p>
+            </div>  
+                <br/>
+                <p>Human Resource Department (This is a system generated letter.)</p>
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <div style = "text-align: center;">
+                    <span><img width="762" height="9" alt="image" th:src="@{classpath:static/SPS_line.jpg}"/></span>
+                </div>
+                <h3 style="text-align: center; margin-bottom: 0pt; padding-bottom: 0pt;">Singapore Sports School
+                    <span class="s4">1 Champions Way,  Singapore 737913</span>
+                </h3>
+                <p style = "text-align: center; margin-top: 0pt; padding-top: 0pt;" class ="s6">
+                    Mainline: (65) 6766 0100    Facsimile: (65) 6766 2100    Email: 
+                    <a href="mailto:enquire@sportsschool.edu.sg" class="s6">enquire@sportsschool.edu.sg</a>    
+                    Website: <a href="http://www.sportsschool.edu.sg/" class="s6">www.sportsschool.edu.sg</a>
+                </p>
+            
+        </div>
+    </body> 
+</html>
