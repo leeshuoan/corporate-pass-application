@@ -1,4 +1,4 @@
-# IS442 OOP G2 T2 
+# IS442 OOP G2 T2 [Project Grade: A+] 
 
 ## Local development
 ### 🔧 Setting up
